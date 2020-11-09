@@ -32,18 +32,20 @@ sumOfMatrices: function (mat1, mat2) {
     return mat3;
   },
 
-  sumOfEachRow: function (mat) {
+  sumOfEachRow: function(mat) {
     let arr = [];
-    for (let i = 0; i < mat[0].length; i++)
-    {
-        let sum = 0;
-        for (let j = 0; j < mat[1].length; j++)
-        {
-            sum += mat[i][j]
-        }
-        arr.push(sum);
+    for ( let i = 0; i < mat[0].length; i++ ){
+        arr.push(this.sumOfArray(mat[i]));
     }
     return arr;
-  }
+},
+
+sumOfArray: function(arr){
+    let sum = 0;
+        for ( let j = 0; j < arr.length; j++ ){
+            sum += arr[j]
+        }
+    return sum; 
+},
 
 };
